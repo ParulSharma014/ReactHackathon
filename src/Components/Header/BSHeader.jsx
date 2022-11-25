@@ -62,13 +62,12 @@ export default function Header() {
                         </>
 }
                     </ul>
-                </div>
-            </div>
+                
 
             {localStorage.getItem('jwt_token') ?
         <div class="dropdown">
           <button class="btn dropdown-toggle" id="user-details-on-header" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            {username.email}
+           Welcome:{username.firstname} {username.lastname}
           </button>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="/login" onClick={logout}>Logout</a></li>
@@ -76,7 +75,8 @@ export default function Header() {
         </div>
         :null
 }
-
+</div>
+            </div>
         </nav>
     
     

@@ -114,9 +114,12 @@ export default function SignUp() {
         .required("Phone cannot be left blank")
         .matches(/^[0][6-9][0-9]{9}$/, "Please add 0 before your 10 digit mobile number."),
 
-      age: yup.string()
-        .required("Age cannot be left blank")
-        .matches(/^[0-9]{1,2}$/, "Please enter valid Age"),
+      age: yup.date()
+        // .required("Age cannot be left blank")
+        // .matches(/^[0-9]{1,2}$/, "Please enter valid Age"),
+        .max(new Date(Date.now() - 567648000000), "You must be at least 18 years") //567648000000 = number of seconds in 18 years
+        .min(new Date(Date.now() - 1892160000000), "you must be under 60 years")
+        .required("Date of Birth Required"),
         
         // age: yup.string()
         // .required("DoB cannot be left blank")
@@ -219,7 +222,7 @@ export default function SignUp() {
                         fullWidth
                         id="age"
                         label="age"
-                        type="number"
+                        type="date"
                         name="age"
 
                       />

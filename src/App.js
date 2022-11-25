@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Footer from './Components/Footer/BSFooter';
 import Header from './Components/Header/BSHeader';
 import ResponsiveAppBar from './Components/Header/Header';
 import HomePage from './Components/HomePage/HomePage';

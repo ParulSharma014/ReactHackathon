@@ -14,6 +14,7 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import GlobalStyles from '@mui/material/GlobalStyles';
 import Container from '@mui/material/Container';
+import './Footer.css'
 
 function Copyright(props) {
   return (
@@ -22,6 +23,7 @@ function Copyright(props) {
       <Link color="inherit" href="https://mui.com/">
         natwest.com
       </Link>{' '}
+      Created by Devendra-
       {new Date().getFullYear()}
       {'.'}
     </Typography>
@@ -92,7 +94,7 @@ function PricingContent() {
     <React.Fragment>
       
       {/* Footer */}
-      <Container 
+      {/* <Container 
         maxWidth="md"
         component="footer"
         sx={{ 
@@ -100,11 +102,13 @@ function PricingContent() {
           mt: 8,
           py: [3, 6],
         }}
-      >
+      > */}
+      <div className="container my-4 user-footer-text">
+        <hr />
         <Grid container spacing={4} justifyContent="space-evenly">
           {footers.map((footer) => (
             <Grid item xs={6} sm={3} key={footer.title}>
-              <Typography variant="h6" color="text.primary" gutterBottom>
+              <Typography variant="h6" color="text.primary" gutterBottom >
                 {footer.title}
               </Typography>
               <ul>
@@ -129,8 +133,8 @@ function PricingContent() {
             </ul>
           </div>
         <Copyright sx={{ mt: 5 }} />
-        
-      </Container>
+        </div>
+      {/* </Container> */}
       
       {/* End footer */}
     </React.Fragment>
