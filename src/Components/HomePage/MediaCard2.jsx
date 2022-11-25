@@ -20,13 +20,10 @@ export default function MediaCard2() {
           Holidaying Abroad?
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          No need to carry foreign currency. just pay using your app or by our PayIt card instantly!
+          No need to carry foreign currency. just pay using your app or by our PayIt card instantly! with lowest Forex charges.
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
+      
     </Card>
   );
 }

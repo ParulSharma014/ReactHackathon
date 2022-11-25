@@ -20,13 +20,10 @@ export default function MediaCard1() {
           Pay Online
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          you can also pay at your doorstep online by using the app. 
+          you can also pay at your doorstep online by using the app. it is fast and super secure and easy to use.
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
+      
     </Card>
   );
 }

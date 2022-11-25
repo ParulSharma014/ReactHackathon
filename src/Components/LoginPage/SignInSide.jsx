@@ -101,10 +101,11 @@ export default function SignInSide() {
         <Grid
           item
           xs={false}
-          sm={4}
+          sm={false}
           md={7}
+          
           sx={{
-            backgroundImage: 'url(./assets/ntwst.jpg)',
+            backgroundImage: 'url(./assets/login2.jpg)',
             backgroundRepeat: 'no-repeat',
             backgroundColor: (t) =>
               t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
@@ -122,7 +123,7 @@ export default function SignInSide() {
               alignItems: 'center',
             }}
           >
-            <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+            <Avatar sx={{ m: 1, bgcolor: '#40135C' }}>
               <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
@@ -161,9 +162,9 @@ export default function SignInSide() {
                 <Grid item xs>
                   <Link href="/forgetpassword" variant="body2">
                     Forgot password?
-                  </Link> <Stack spacing={2} sx={{ width: '100%' }}>
+                  </Link> <Stack spacing={2} sx={{ width: '100%'}}>
                                     <Button
-                                        sx={{ mt: 3, mb: 2 }}
+                                        sx={{ mt: 3, mb: 2, backgroundColor:"#40135C"}}
                                         type="submit"
                                         variant="contained"
                                         onClick={handleClick}>
