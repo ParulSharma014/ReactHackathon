@@ -21,6 +21,7 @@ import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
+import { InputAdornment, OutlinedInput } from '@mui/material';
 
 const theme = createTheme();
 
@@ -216,15 +217,17 @@ export default function SignUp() {
                     </Grid>
 
                     <Grid item xs={12}>
-                      <TextField
+                      <OutlinedInput
                         onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.age}
                         required
                         fullWidth
                         id="age"
-                        label="age"
+                        // label="age"
                         type="date"
                         name="age"
-
+                        endAdornment={
+                          <InputAdornment position="end">DoB</InputAdornment>
+                        }
                       />
                       {formik.errors.age && formik.touched.age ? <span className='text-danger'>{formik.errors.age}</span> : null}
                     </Grid>

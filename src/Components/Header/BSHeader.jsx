@@ -69,6 +69,7 @@ export default function Header() {
           <button class="btn dropdown-toggle" id="user-details-on-header" type="button" data-bs-toggle="dropdown" aria-expanded="false">
            Welcome:{username.firstname} {username.lastname}
           </button>
+          
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="/login" onClick={logout}>Logout</a></li>
           </ul>
