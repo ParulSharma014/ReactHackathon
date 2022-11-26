@@ -1,19 +1,8 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardHeader from '@mui/material/CardHeader';
-import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
-import StarIcon from '@mui/icons-material/StarBorder';
-import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import GlobalStyles from '@mui/material/GlobalStyles';
-import Container from '@mui/material/Container';
 import './Footer.css'
 
 function Copyright(props) {
@@ -30,58 +19,25 @@ function Copyright(props) {
   );
 }
 
-const tiers = [
-  {
-    title: 'Mobile App',
-    price: '1',
-    description: [
-      'This rate is available on loans between £7,500 and £14,950. Other loan amounts are available at, alternative rates. Our rates depend on your circumstances and loan amount and may differ from the ,Representative APR.'
-    ],
-    buttonText: 'Read More',
-    buttonVariant: 'contained',
-  },
-  {
-    title: 'Loan',
-    subheader: 'Most popular Personal Loan',
-    price: '15',
-    description: [
-      'Apply for a personal loan with our 5 star rated service',
-    ],
-    buttonText: 'Read More',
-    buttonVariant: 'contained',
-  },
-  {
-    title: 'Mortgage',
-    price: '30',
-    description: [
-      'NatWest mortgages are available to over 18s.',
-      'Your home or property may be repossessed if you do not keep up ',
-      'repayments on your mortgage.',
-     
-    ],
-    buttonText: 'Read More',
-    buttonVariant: 'contained',
-  },
-];
 
 const footers = [
   {
-    title: 'Company',
+    title: 'NatWest',
     description: ['Team', 'History', 'Contact us', 'Locations'],
   },
   {
-    title: 'Features',
+    title: 'Wallet Features',
     description: [
-      'Cool stuff',
-      'Random feature',
-      'Team feature',
-      'Developer stuff',
-      'Another one',
+      'Daily Offers',
+      'Redeem Reward points',
+      'Refer your friends',
+      'Desktop App',
+      'How to use',
     ],
   },
   {
     title: 'Resources',
-    description: ['Resource', 'Resource name', 'Another resource', 'Final resource'],
+    description: ['Branch Locator', 'ATM Locator', 'Change your pin', 'Wallet Deactivation'],
   },
   {
     title: 'Legal',
@@ -93,16 +49,7 @@ function PricingContent() {
   return (
     <React.Fragment>
       
-      {/* Footer */}
-      {/* <Container 
-        maxWidth="md"
-        component="footer"
-        sx={{ 
-          borderTop: (theme) => `1px solid ${theme.palette.divider}`,
-          mt: 8,
-          py: [3, 6],
-        }}
-      > */}
+     
       <div className="container my-4 user-footer-text">
         <hr />
         <Grid container spacing={4} justifyContent="space-evenly">

@@ -19,9 +19,10 @@ export default function SimpleAccordion() {
         <AccordionDetails>
           <Typography style={{color: "#42145F"}}>
            <h4><strong>Personal Banking</strong> 1800 270 1818 </h4> 
-           <h4><strong>Business Banking</strong> 1800 270 1919 </h4> 
+           <h4><strong>NatWest Pay Wallet</strong> 1800 270 1919 </h4> 
            <h4><strong>Loan</strong> 1800 270 2020 </h4> 
-           <h4><strong>Mortgage</strong> 1800 270 2121 </h4> 
+           <h4><strong>Insurance</strong> 1800 270 2121 </h4> 
+           <h4><strong>Credit Card</strong> 1800 270 2222 </h4>
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -35,14 +36,12 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography style={{color: "#42145F"}}>
-         <p><strong> Agile Markets </strong>- support@natwestmarkets.com</p>
-<p><strong> Brexit Information</strong> - clientaccountmanagement@natwestmarkets.com</p>
-<p><strong> Dodd Frank (DF) Protocol </strong>- dfprotocol@natwestmarkets.com</p>
-<p><strong> European Market Infrastructure Regulation (EMIR) Regulation</strong> - emirregulation@natwestmarkets.com</p>
-<p><strong> FXmicropay</strong>- fxmicropaysales@natwestmarkets.com</p>
-<p> <strong>General Data Protection Regulation (GDPR)</strong>- SARS@natwestmarkets.com</p>
-<p><strong> MiFID 2</strong>- mifid2@natwestmarkets.com</p>
-<p><strong> MicroRates</strong>- MicroRates@natwestmarkets.com</p>
+         <h5><strong> Personal Banking </strong>- support@natwest.com</h5>
+<h5><strong> NatWest Pay Wallet </strong> - nwpaywallet@natwest.com</h5>
+<h5><strong> Loan </strong>- lending@natwest.com</h5>
+<h5><strong> Insurance</strong> - insurance@natwest.com</h5>
+<h5><strong> Credit Card</strong>- creditcard@natwest.com</h5>
+
           </Typography>
         </AccordionDetails>
       </Accordion>

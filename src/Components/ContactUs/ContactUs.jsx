@@ -81,8 +81,8 @@ export default function ContactUs() {
               spacing={2}
               justifyContent="center"
             >
-              <Button variant="contained">Call Us</Button>
-              <Button variant="outlined">Mail Us</Button>
+              <Button variant="contained" style={{backgroundColor:'#5E10B1'}}>Call Us</Button>
+              <Button variant="outlined"style={{backgroundColor:'#5E10B1', color:'white', border:'purple'}}>Mail Us</Button>
             </Stack>
           </Container>
         </Box>
@@ -105,19 +105,24 @@ export default function ContactUs() {
                     alt="random"
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography gutterBottom variant="h5" component="h2">
+                    <Typography gutterBottom variant="h5" component="h2" style={{textAlign:'center', fontWeight:'bold'}}>
                     NatWest Group general enquiries
 
                     </Typography>
-                    <Typography>
+                    <Typography style={{textAlign:'center'}}>
                     For general enquiries please try our contact us page or call us on one of the numbers below.
-Call Telephone Banking Call us on: 03457 888 444. Overseas: 0345 030 3605. You can also write to us at 250 Bishopsgate, London, EC2M 4AA.
+                    </Typography>
+    <Typography style={{textAlign:'center'}}>                
+Call Telephone Banking Call us on: 03457 888 444. Overseas: 0345 030 3605. 
+</Typography>
+    <Typography style={{textAlign:'center'}}>
+You can also write to us at 250 Bishopsgate, London, EC2M 4AA.
                     </Typography>
                   </CardContent>
-                  <CardActions>
+                  {/* <CardActions>
                     <Button size="small">View</Button>
                     <Button size="small">Edit</Button>
-                  </CardActions>
+                  </CardActions> */}
                 </Card>
               </Grid>
             ))}
@@ -129,23 +134,6 @@ Call Telephone Banking Call us on: 03457 888 444. Overseas: 0345 030 3605. You c
 <SimpleAccordion/>
 </div>
 
-
-      {/* Footer */}
-      <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
-        <Typography variant="h6" align="center" gutterBottom>
-          NatWest Bank
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          color="text.secondary"
-          component="p"
-        >
-          
-        </Typography>
-        
-      </Box>
-      {/* End footer */}
     </ThemeProvider>
   );
 }

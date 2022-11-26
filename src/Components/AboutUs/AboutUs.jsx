@@ -3,12 +3,11 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
-import './AboutUs.css'
+import { Button, CardActionArea, CardActions } from '@mui/material';
 import { useNavigate } from "react-router-dom";
 import {useEffect} from 'react'
 
-export default function ActionAreaCard() {
+export default function MultiActionAreaCard() {
 
   const navigate = useNavigate();  //variable to protect the page
 
@@ -33,273 +32,93 @@ export default function ActionAreaCard() {
 }, [])
 
 
-
   return (
-    <div className="container user-aboutus">
+    <div className='user-aboutus'>
+      <div className="container">
         <div className="row">
-            <div className="col-12 col-md-6 col-lg-4 col-xl-3">
-    <Card sx={{ maxWidth: 345 }}>
+          <div className="col-12 col-md-6">
+    <Card sx={{ maxWidth: 500 }}>
+    <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            Mobile App
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Just download the NatWest Pay Wallet Mobile app and then forget about carrying cash or cards. Make all your transactions on the go with a single click.
+          </Typography>
+        </CardContent>
+    
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
-          image="https://source.unsplash.com/900x600/?bank"
+          height="400"
+          image="./assets/mabout.png"
+          alt="green iguana"
+        />
+        
+      </CardActionArea>
+      
+    </Card>
+    </div>
+
+
+    <div className="col-12 col-md-6">
+    <Card sx={{ maxWidth: 500 }}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="400"
+          image="./assets/mdesk.png"
           alt="green iguana"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Sice 1968
+            Desktop App
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            NatWest has been serving customers since 1968.
+          We have the app for your laptops as well. just install and see how much faster it is from the conventional Net Banking and with added features. Try now.
           </Typography>
         </CardContent>
       </CardActionArea>
-    </Card>    
+     
+    </Card>
     </div>
 
-    <div className="col-12 col-md-6 col-lg-4 col-xl-3">
-    <Card sx={{ maxWidth: 345 }}>
+    </div>
+    </div>
+
+<div className="container my-4">
+  <div className="row">
+    <div className="col">
+    <Card sx={{ maxWidth: 500 }}>
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
-          image="https://source.unsplash.com/900x600/?bank, money"
+          height="300"
+          image="./assets/abtt.gif"
           alt="green iguana"
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Helping community
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Helping out community is an initiative, which we have been following since the inception.
-          </Typography>
-        </CardContent>
+        
       </CardActionArea>
-    </Card>    
+    </Card>
     </div>
 
-    <div className="col-12 col-md-6 col-lg-4 col-xl-3">
-    <Card sx={{ maxWidth: 345 }}>
+    <div className="col">
+    <Card sx={{ maxWidth: 500 }}>
+    
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
-          image="https://source.unsplash.com/900x600/?nature"
+          height="300"
+          image="./assets/new.jpg"
           alt="green iguana"
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Environment
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            We have been reducing our carbon footprints to help out the nature.
-          </Typography>
-        </CardContent>
+        
       </CardActionArea>
-    </Card>    
-    </div>
-
-    <div className="col-12 col-md-6 col-lg-4 col-xl-3">
-    <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image="https://source.unsplash.com/900x600/?wild"
-          alt="green iguana"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Preserving Wildlife
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            with out environment initiative we are working with UK Government to preserve the wildlife.
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>    
-    </div>
+    </Card>
 
     </div>
-
-    <div className="row">
-            <div className="col-12 col-md-6 col-lg-4 col-xl-3">
-    <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image="https://source.unsplash.com/900x600/?office"
-          alt="green iguana"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-          Annual Report and Accounts 2021
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-          We champion potential, helping people, families and businesses to thrive. Find out more in our Annual Report and Accounts.
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>    
     </div>
-
-    <div className="col-12 col-md-6 col-lg-4 col-xl-3">
-    <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image="https://source.unsplash.com/900x600/?mountains"
-          alt="green iguana"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-          Climate-related Disclosures Report 2021
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-          Details our progress in 2021 on our climate ambitions including an overview of our approach to climate-related governance, strategy (including scenario analysis), risk management, metrics and targets.
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>    
     </div>
-
-    <div className="col-12 col-md-6 col-lg-4 col-xl-3">
-    <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image="https://source.unsplash.com/900x600/?wild"
-          alt="green iguana"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-          Environmental, Social and Governance (ESG) Supplement 2021
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-          Provides an overview of our purpose in action and key environmental, social and governance matters including progress in 2021.
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>    
-    </div>
-
-    <div className="col-12 col-md-6 col-lg-4 col-xl-3">
-    <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image="https://source.unsplash.com/900x600/?royal"
-          alt="green iguana"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-          We have four strategic priorities...
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-          We are a relationship bank for a digital world. Our strategy for growth delivers on our purpose and drives sustainable returns to shareholders through four strategic priorities:
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>    
-    </div>
-
-    </div>
-
-
-
-    <div className="row">
-            <div className="col-12 col-md-6 col-lg-4 col-xl-3">
-    <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image="https://source.unsplash.com/900x600/?trees"
-          alt="green iguana"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Clean Air
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Clean Air is essential part of our life. we have been planting 10,000 trees per year so our new generation can breathe clean air.
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>    
-    </div>
-
-    <div className="col-12 col-md-6 col-lg-4 col-xl-3">
-    <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image="https://source.unsplash.com/900x600/?snow"
-          alt="green iguana"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Global Warming
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            We have been working with some of the NGOs to curb the global warming by re cycling the office waste.
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>    
-    </div>
-
-    <div className="col-12 col-md-6 col-lg-4 col-xl-3">
-    <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image="https://source.unsplash.com/900x600/?charity"
-          alt="green iguana"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Charity
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            We give 5% of our profit to various charity groups as our commintment to the community.
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>    
-    </div>
-
-    <div className="col-12 col-md-6 col-lg-4 col-xl-3">
-    <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image="https://source.unsplash.com/900x600/?money"
-          alt="green iguana"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Currency
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Helping out UK Government in mintin new coins and printing new currency notes.
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>    
-    </div>
-
-    </div>
-
-
     </div>
   );
 }

@@ -40,10 +40,10 @@ export default function Header() {
               localStorage.getItem('jwt_token') ?
                 <>
                         <li class="nav-item">
-                            <Link class="nav-link active" to="/contactus">Contact Us</Link>
+                            <Link class="nav-link active" to="/contactus">Contact us</Link>
                         </li>
                         <li class="nav-item">
-                            <Link class="nav-link active" to="/aboutus">About Us</Link>
+                            <Link class="nav-link active" to="/aboutus">About us</Link>
                         </li>
                         <li class="nav-item">
                             <Link class="nav-link active" to="/services">Services</Link>
