@@ -29,7 +29,7 @@ export default function BasicCard() {
           Easy {bull} Fast {bull} Secure {bull} Rewarding
         </Typography>
         <Typography variant="body2">
-         <h6> Using our all new NatWest Pay Wallet service. it is super easy, fast, reliable and rewarding too. Load money into the wallet or use your NatWest Debit or Credit card and earn Rewards.</h6>
+         <h5> Try our all new NatWest Pay Wallet. It is Super Easy, Fast, Reliable and Rewarding as well.</h5>
           <br />
         </Typography>
       </CardContent>

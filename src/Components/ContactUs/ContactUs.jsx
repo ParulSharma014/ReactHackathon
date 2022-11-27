@@ -101,7 +101,7 @@ export default function ContactUs() {
                     //   pt: '0.25%',
                     height: '60vh'
                     }}
-                    image="https://source.unsplash.com/1600x900/?coding,laptop,mobile"
+                    image="./assets/contact1.jpg"
                     alt="random"
                   />
                   <CardContent sx={{ flexGrow: 1 }}>

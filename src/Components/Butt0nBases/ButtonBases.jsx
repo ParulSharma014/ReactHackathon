@@ -7,17 +7,17 @@ import Typography from '@mui/material/Typography';
 
 const images = [
   {
-    url: 'https://source.unsplash.com/900x600/?laptop',
+    url: './assets/digital.jpg',
     title: 'Digital',
     width: '33%',
   },
   {
-    url: 'https://source.unsplash.com/900x600/?code,technology',
+    url: './assets/advanced.jpg',
     title: 'Advanced',
     width: '34%',
   },
   {
-    url: 'https://source.unsplash.com/900x600/?mobile,technology',
+    url: './assets/secure.jpg',
     title: 'Secure',
     width: '33%',
   },

@@ -32,7 +32,6 @@ const footers = [
       'Redeem Reward points',
       'Refer your friends',
       'Desktop App',
-      'How to use',
     ],
   },
   {

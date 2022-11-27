@@ -38,7 +38,6 @@ const Alert = React.forwardRef(function Alert(props, ref) {         //added for 
 export default function SignInSide() {
 
 
-
   const [open, setOpen] = React.useState(false);   //added for snackbar
   const handleClick = () => { }
   const handleClose = (event, reason) => {
@@ -47,8 +46,6 @@ export default function SignInSide() {
     }
     setOpen(false);
   };
-
-
 
 
   const navigate = useNavigate();
