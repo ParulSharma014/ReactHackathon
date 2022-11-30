@@ -97,7 +97,7 @@ export default function Register() {
                   </div>
 
                   <div className="mb-2">
-                     <label class="visually-hidden" for="autoSizingInputGroup">Username</label>
+                     <label class="visually-hidden" for="autoSizingInputGroup">Password</label>
                      <div class="input-group">
                         <div class="input-group-text"><i class="fa-solid fa-key"></i></div>
                         <input type="password" id="pass" className="form-control" onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
@@ -107,7 +107,7 @@ export default function Register() {
 
                   <div className="mb-4">
 
-                     <label class="visually-hidden" for="autoSizingInputGroup">Username</label>
+                     <label class="visually-hidden" for="autoSizingInputGroup">ConfirmPassword</label>
                      <div class="input-group">
                         <div class="input-group-text"><i class="fa-solid fa-key"></i></div>
                         <input type="password" id="confirm" className="form-control" onChange={(e) => setConfirmPassword(e.target.value)} placeholder="Confirm Password" />

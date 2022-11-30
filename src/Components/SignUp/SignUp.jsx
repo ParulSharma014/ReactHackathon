@@ -142,7 +142,9 @@ export default function SignUp() {
     })
   })
 
-
+  const handleChange = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <div className="container user-signup">
@@ -270,6 +272,8 @@ export default function SignUp() {
                         label="New Password"
                         type="password"
                         id="password"
+                        onCopy={handleChange}
+                        onPaste={handleChange}
 
                       />
                       {formik.errors.password && formik.touched.password ? <span className='text-danger'>{formik.errors.password}</span> : null}
@@ -284,6 +288,8 @@ export default function SignUp() {
                         label="Confirm Password"
                         type="password"
                         id="confirmpassword"
+                        onCopy={handleChange}
+                        onPaste={handleChange}
 
                       />
                       {formik.errors.confirmpassword && formik.touched.confirmpassword ? <span className='text-danger'>{formik.errors.confirmpassword}</span> : null}

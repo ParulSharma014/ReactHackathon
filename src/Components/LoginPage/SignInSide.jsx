@@ -89,6 +89,10 @@ export default function SignInSide() {
     })
   })
 
+  const handleChange = (e) => {
+    e.preventDefault();
+  };
+
 
   return (
     <div className="container user-SignInSide">
@@ -151,6 +155,8 @@ export default function SignInSide() {
                   type="password"
                   id="password"
                   autoComplete="current-password"
+                  onCopy={handleChange}
+                        onPaste={handleChange}
                 />
                 {formik.errors.password && formik.touched.password ? <span className='text-danger'>{formik.errors.password}</span> : null}
 
