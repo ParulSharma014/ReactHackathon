@@ -2,10 +2,12 @@ import React from 'react';
 import './ForgetPassword.css'
 import { useState } from 'react';
 
+
 export default function Register() {
    const [email, setEmail] = useState('')
    const [password, setPassword] = useState('')
    const [confirmpassword, setConfirmPassword] = useState('')
+   
 
    // vallidation used
    const PasswordHandeller = () => {
@@ -42,6 +44,7 @@ export default function Register() {
                               "Content-Type": "application/json",
                            },
                            body: JSON.stringify({ email, password }),
+                           
                         })
                            .then((res) => {
                               return res.json();
@@ -59,6 +62,7 @@ export default function Register() {
                   }
                   else {
                      document.getElementById("msg").innerHTML = "Password Updated Successfully !";
+                     
                   }
                })
                .catch(err => console.error(err))
@@ -75,7 +79,7 @@ export default function Register() {
          <div className="container-fluid user-forget-password">
             <div className="row">
                <div className="col-sm-12 md-6 col-lg-6 mt-4">
-                  <img src="./assets/forgo.jpeg" style={{ width: '100%' }} className="img-fluid" />
+                  <img src="./assets/forgo.jpeg" style={{ width: '100%' }} className="img-fluid"/>
                </div>
                <div className="col-sm-12 md-6 col-lg-5">
                   {/* <h1 className="mb-2 mt-4">Reset Password</h1> */}

@@ -2,7 +2,7 @@
   "Register": [
     {
       "email": "clarke@ca.com",
-      "password": "123456",
+      "password": "1234567",
       "id": 1
     },
     {
@@ -11,9 +11,19 @@
       "id": 2
     },
     {
-      "email": "stark@marvel.com",
-      "password": "ldldld",
+      "email": "raman@gmail.com",
+      "password": "Dd@1234",
       "id": 3
+    },
+    {
+      "email": "peter@gmail.com",
+      "password": "Dd@1234",
+      "id": 4
+    },
+    {
+      "email": "ramannew@gmail.com",
+      "password": "Dd@1234",
+      "id": 5
     }
   ]
 }
