@@ -22,6 +22,12 @@ import Stack from '@mui/material/Stack';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 import { InputAdornment, OutlinedInput } from '@mui/material';
+import FormControl from "@mui/material/FormControl";
+import InputLabel from "@mui/material/InputLabel";
+import IconButton from "@mui/material/IconButton";
+import Visibility from "@mui/icons-material/Visibility";
+import VisibilityOff from "@mui/icons-material/VisibilityOff";
+
 
 const theme = createTheme();
 
@@ -32,6 +38,34 @@ const Alert = React.forwardRef(function Alert(props, ref) {                 // 1
 
 
 export default function SignUp() {
+
+  const [values, setValues] = React.useState({        //for password show field
+    password: "",
+    confirmpassword: "",
+    showPassword: false
+  });
+
+  const handleChange1 = (prop) => (event) => {
+    setValues({ ...values, [prop]: event.target.value });
+  };
+
+  const handleChange2 = (prop) => (event) => {
+    setValues({ ...values, [prop]: event.target.value });
+  };
+
+  const handleClickShowPassword = () => {
+    setValues({
+      ...values,
+      showPassword: !values.showPassword
+    });
+  };
+  const handleMouseDownPassword = (event) => {
+    event.preventDefault();
+  };
+
+
+
+
 
 
   const [open, setOpen] = React.useState(false);   //2 added for snack bars
@@ -121,12 +155,12 @@ export default function SignUp() {
         .max(new Date(Date.now() - 567648000000), "You must be at least 18 years") //567648000000 = number of seconds in 18 years
         .min(new Date(Date.now() - 1892160000000), "you must be under 60 years")
         .required("Date of Birth Required"),
-        
-        // age: yup.string()
-        // .required("DoB cannot be left blank")
-        // .matches(/^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/, "Please enter valid Age"),
 
-     
+      // age: yup.string()
+      // .required("DoB cannot be left blank")
+      // .matches(/^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/, "Please enter valid Age"),
+
+
       password: yup.string()
         .required("Password cannot be left blank")
         .matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/, "password must be between 6 to 20 characters which contain at least one numeric digit, one uppercase and one lowercase letter and one symbol."),
@@ -176,16 +210,16 @@ export default function SignUp() {
                 <Box component="form" noValidate onSubmit={formik.handleSubmit} sx={{ mt: 3 }}>
                   <Grid container spacing={2}>
                     <Grid item xs={12}>
-                      <TextField 
+                      <TextField
                         onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.firstname}
-                        
+
                         name="firstname"
                         required
                         fullWidth
                         id="firstname"
                         label="First Name"
                         type="text"
-                        autoFocus   
+                        autoFocus
                       />
                       {formik.errors.firstname && formik.touched.firstname ? <span className='text-danger'>{formik.errors.firstname}</span> : null}
 
@@ -257,13 +291,11 @@ export default function SignUp() {
                         id="email"
                         label="Email Address"
                         name="email"
-
-
                       />
                       {formik.errors.email && formik.touched.email ? <span className='text-danger'>{formik.errors.email}</span> : null}
                     </Grid>
 
-                    <Grid item xs={12}>
+                    {/* <Grid item xs={12}>
                       <TextField
                         onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.password}
                         required
@@ -292,6 +324,73 @@ export default function SignUp() {
                         onPaste={handleChange}
 
                       />
+                      {formik.errors.confirmpassword && formik.touched.confirmpassword ? <span className='text-danger'>{formik.errors.confirmpassword}</span> : null}
+                    </Grid> */}
+
+
+                    <Grid item xs={12}>
+                      <FormControl fullWidth sx={{ mt: 1 }} variant="outlined" onChange={formik.handleChange} onBlur={formik.handleBlur}
+                        value={formik.values.password}>
+                        <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
+                        <OutlinedInput
+                          id="password"
+                          required
+                          fullWidth
+
+                          onCopy={handleChange}
+                          onPaste={handleChange}
+                          type={values.showPassword ? "text" : "password"}
+                          value={values.password}
+                          onChange={handleChange1("password")}
+                          endAdornment={
+                            <InputAdornment position="end">
+                              <IconButton
+                                aria-label="toggle password visibility"
+                                onClick={handleClickShowPassword}
+                                onMouseDown={handleMouseDownPassword}
+                                edge="end"
+                              // margin="normal"
+                              // fullWidth
+                              >
+                                {values.showPassword ? <VisibilityOff /> : <Visibility />}
+                              </IconButton>
+                            </InputAdornment>
+                          }
+                          label="Password"
+                        />
+                      </FormControl>
+                      {formik.errors.password && formik.touched.password ? <span className='text-danger'>{formik.errors.password}</span> : null}
+                    </Grid>
+                    <Grid item xs={12}>
+                      <FormControl fullWidth sx={{ mt: 1 }} variant="outlined" onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.confirmpassword}>
+                        <InputLabel htmlFor="outlined-adornment-password">Confirm Password</InputLabel>
+                        <OutlinedInput
+                          id="confirmpassword"
+                          required
+                          fullWidth
+
+                          onCopy={handleChange}
+                          onPaste={handleChange}
+                          type={values.showPassword ? "text" : "password"}
+                          value={values.confirmpassword}
+                          onChange={handleChange2("confirmpassword")}
+                          endAdornment={
+                            <InputAdornment position="end">
+                              <IconButton
+                                aria-label="toggle password visibility"
+                                onClick={handleClickShowPassword}
+                                onMouseDown={handleMouseDownPassword}
+                                edge="end"
+                              // margin="normal"
+                              // fullWidth
+                              >
+                                {values.showPassword ? <VisibilityOff /> : <Visibility />}
+                              </IconButton>
+                            </InputAdornment>
+                          }
+                          label="Confirm Password"
+                        />
+                      </FormControl>
                       {formik.errors.confirmpassword && formik.touched.confirmpassword ? <span className='text-danger'>{formik.errors.confirmpassword}</span> : null}
                     </Grid>
                   </Grid>

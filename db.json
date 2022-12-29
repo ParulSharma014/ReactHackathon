@@ -24,6 +24,11 @@
       "email": "ramannew@gmail.com",
       "password": "Dd@1234",
       "id": 5
+    },
+    {
+      "email": "dev@gmail.com",
+      "password": "Dd@1234",
+      "id": 6
     }
   ]
 }
