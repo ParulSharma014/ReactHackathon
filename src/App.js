@@ -10,6 +10,7 @@ import MuiFooter from './Components/Footer/Footer';
 import ActionAreaCard from './Components/AboutUs/AboutUs';
 import SignInSide from './Components/LoginPage/SignInSide';
 import Register from './Components/ForgetPassword/ForgetPassword';
+import Footer from './Components/Footer/BSFooter';
 
 
 
@@ -32,11 +33,11 @@ function App() {
         </Routes>
         {/* <StickyFooter /> */}
         
-        {/* <Footer/> */}
+        <Footer/>
         
         
         
-        <MuiFooter/>
+        {/* <MuiFooter/> */}
       </BrowserRouter>
 
     </div>
